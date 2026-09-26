@@ -214,8 +214,54 @@ a { color: inherit; }
 .intro-grid {
   display: grid;
   grid-template-columns: .72fr 1.28fr;
-  gap: 46px;
-  align-items: start;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.intro-core-card,
+.principle-cards article {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.intro-core-card {
+  min-height: 420px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.intro-core-card::before,
+.principle-cards article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.intro-core-card::before {
+  background-image:
+    linear-gradient(180deg, rgba(244,247,251,.99) 0%, rgba(244,247,251,.94) 48%, rgba(244,247,251,.58) 70%, rgba(244,247,251,.16) 100%),
+    url('./assets/banners/nucleo-pedadogico.png');
+}
+
+.intro-core-card > *,
+.principle-cards article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-core-card .section-tag {
+  background: rgba(13,107,93,.12);
+}
+
+.intro-core-card h2 {
+  max-width: 460px;
 }
 .section h2 {
   margin: 15px 0 0;
@@ -223,19 +269,40 @@ a { color: inherit; }
   line-height: 1.02;
   letter-spacing: -.045em;
 }
-.principle-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.principle-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
 .principle-cards article, .theory-grid article {
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
 }
+
+.principle-cards article {
+  min-height: 420px;
+}
+
+.principle-cards article::before {
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,.95) 43%, rgba(255,255,255,.72) 62%, rgba(255,255,255,.20) 100%),
+    var(--principle-image);
+}
+
+.principle-intencion { --principle-image: url('./assets/banners/intencion.png'); }
+.principle-repertorio { --principle-image: url('./assets/banners/repertorio.png'); }
+.principle-progresion { --principle-image: url('./assets/banners/progresion.png'); }
+
 .principle-cards span {
   display: inline-block;
   color: var(--brand);
   font-size: .78rem;
   font-weight: 800;
 }
+
 .principle-cards h3, .theory-grid h3 { margin: 34px 0 8px; font-size: 1.08rem; }
 .principle-cards p, .theory-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
 .workspace-section {
@@ -440,13 +507,18 @@ input[type="text"]:focus, textarea:focus {
 }
 .theory-grid h3 { margin-top: 30px; }
 .teacher-section {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: .85fr 1.15fr;
   gap: 56px;
   padding: 50px;
   border-radius: 30px;
-  background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+  background:
+    linear-gradient(90deg, rgba(5,76,66,.99) 0%, rgba(5,76,66,.93) 42%, rgba(5,76,66,.79) 68%, rgba(5,76,66,.62) 100%),
+    url('./assets/banners/teacher-zone.png') 72% 67% / cover no-repeat;
   color: white;
+  box-shadow: var(--shadow);
 }
 .teacher-copy .section-tag { color: #d4fff6; background: rgba(255,255,255,.12); }
 .teacher-copy h2 { margin-top: 16px; }
@@ -458,7 +530,8 @@ input[type="text"]:focus, textarea:focus {
   padding: 18px;
   border: 1px solid rgba(255,255,255,.15);
   border-radius: 16px;
-  background: rgba(255,255,255,.08);
+  background: rgba(255,255,255,.14);
+  backdrop-filter: blur(4px);
 }
 .teacher-tools span {
   width: 34px; height: 34px; flex: 0 0 auto;
@@ -503,6 +576,8 @@ footer strong { color: var(--text); }
   .step-hero-copy { width: min(68%, 620px); }
   .hero h1 { font-size: clamp(2.5rem, 11vw, 4.5rem); }
   .intro-grid, .teacher-section { grid-template-columns: 1fr; }
+  .intro-core-card { min-height: 360px; }
+  .principle-cards article { min-height: 360px; }
   .principle-cards, .theory-grid { grid-template-columns: 1fr 1fr; }
   .workspace { grid-template-columns: 1fr; }
   .step-nav {
@@ -520,6 +595,12 @@ footer strong { color: var(--text); }
   .hero { padding: 38px 20px; border-radius: 24px; }
   .hero h1 { letter-spacing: -.045em; }
   .principle-cards, .theory-grid, .two-col { grid-template-columns: 1fr; }
+  .intro-core-card,
+  .principle-cards article { min-height: 330px; }
+  .teacher-section {
+    background-position: 60% 70%;
+    background-size: auto 125%;
+  }
   .workspace-section { padding: 18px; border-radius: 22px; }
   .section-heading { align-items: start; flex-direction: column; }
   .progress-wrap { width: 100%; }

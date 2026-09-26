@@ -8,7 +8,12 @@ const TRANSWRITE_BANNERS = [
   "./assets/banners/write-english.png",
   "./assets/banners/check-the-meaning.png",
   "./assets/banners/rewrite.png",
-  "./assets/banners/my-reflection.png"
+  "./assets/banners/my-reflection.png",
+  "./assets/banners/nucleo-pedadogico.png",
+  "./assets/banners/intencion.png",
+  "./assets/banners/repertorio.png",
+  "./assets/banners/progresion.png",
+  "./assets/banners/teacher-zone.png"
 ];
 
 function preloadTransWriteBanners() {
