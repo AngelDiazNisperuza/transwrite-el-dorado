@@ -1,3 +1,26 @@
+
+// Preload banner artwork so every writing stage opens with its image ready.
+const TRANSWRITE_BANNERS = [
+  "./assets/banners/hero-transwrite.png",
+  "./assets/banners/my-idea.png",
+  "./assets/banners/meaning-bridge.png",
+  "./assets/banners/plan-my-text.png",
+  "./assets/banners/write-english.png",
+  "./assets/banners/check-the-meaning.png",
+  "./assets/banners/rewrite.png",
+  "./assets/banners/my-reflection.png"
+];
+
+function preloadTransWriteBanners() {
+  TRANSWRITE_BANNERS.forEach(src => {
+    const img = new Image();
+    img.decoding = "async";
+    img.src = src;
+  });
+}
+
+window.addEventListener("load", preloadTransWriteBanners, { once: true });
+
 const STORAGE_KEY = "transwrite-el-dorado-v1";
 let currentStep = 1;
 
