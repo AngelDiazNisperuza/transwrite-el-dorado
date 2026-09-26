@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TransWrite El Dorado: ruta pedagógica de translenguaje para apoyar la producción textual en inglés en Media Académica.">
+  <title>TransWrite · El Dorado</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark">TW</span>
+      <span>
+        <strong>TransWrite</strong>
+        <small>El Dorado · Montería</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegación principal">
+      <a href="#ruta">Ruta</a>
+      <a href="#fundamento">Fundamento</a>
+      <a href="#docente">Teacher Zone</a>
+      <button id="themeToggle" class="icon-button" type="button" aria-label="Cambiar tema">◐</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Propuesta pedagógica digital · versión inicial</span>
+        <h1>De la idea al texto en inglés mediante una ruta consciente de translenguaje</h1>
+        <p>
+          TransWrite acompaña a estudiantes de Media Académica en la planificación, producción,
+          revisión y reformulación de textos en inglés, tomando el repertorio lingüístico disponible
+          como punto de apoyo para conservar la intención comunicativa y avanzar hacia una expresión
+          escrita cada vez más clara.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#ruta">Comenzar ruta</a>
+          <a class="button secondary" href="#fundamento">Ver fundamento</a>
+        </div>
+        <div class="status-note">
+          <span>●</span>
+          <p>Arquitectura provisional: se ajustará con las categorías y relaciones emergentes del Capítulo IV.</p>
+        </div>
+      </div>
+      <div class="hero-panel" aria-label="Ruta de siete momentos">
+        <p class="panel-kicker">Ruta TransWrite</p>
+        <ol class="mini-flow">
+          <li><span>1</span> My Idea</li>
+          <li><span>2</span> Meaning Bridge</li>
+          <li><span>3</span> Plan My Text</li>
+          <li><span>4</span> Write in English</li>
+          <li><span>5</span> Check the Meaning</li>
+          <li><span>6</span> Rewrite</li>
+          <li><span>7</span> My Reflection</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section intro-grid" aria-labelledby="principlesTitle">
+      <div>
+        <span class="section-tag">Núcleo pedagógico</span>
+        <h2 id="principlesTitle">La escritura se trabaja como proceso de construcción de significado</h2>
+      </div>
+      <div class="principle-cards">
+        <article>
+          <span>01</span>
+          <h3>Intención</h3>
+          <p>Primero se precisa qué se quiere comunicar y para quién se escribe.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Repertorio</h3>
+          <p>El español y los recursos lingüísticos previos apoyan la elaboración inicial del significado.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Progresión</h3>
+          <p>La ruta conduce hacia una versión final en inglés mediante decisiones sucesivas de escritura.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ruta" class="section workspace-section" aria-labelledby="workspaceTitle">
+      <div class="section-heading">
+        <div>
+          <span class="section-tag">Student Workspace</span>
+          <h2 id="workspaceTitle">Construye tu texto paso a paso</h2>
+        </div>
+        <div class="progress-wrap" aria-label="Progreso">
+          <span id="progressLabel">Paso 1 de 7</span>
+          <div class="progress-track"><span id="progressBar"></span></div>
+        </div>
+      </div>
+
+      <div class="workspace">
+        <aside class="step-nav" aria-label="Pasos de la ruta">
+          <button class="step-tab active" data-step="1"><span>1</span><div><strong>My Idea</strong><small>Define el mensaje</small></div></button>
+          <button class="step-tab" data-step="2"><span>2</span><div><strong>Meaning Bridge</strong><small>Construye el puente</small></div></button>
+          <button class="step-tab" data-step="3"><span>3</span><div><strong>Plan My Text</strong><small>Organiza la secuencia</small></div></button>
+          <button class="step-tab" data-step="4"><span>4</span><div><strong>Write in English</strong><small>Redacta el borrador</small></div></button>
+          <button class="step-tab" data-step="5"><span>5</span><div><strong>Check the Meaning</strong><small>Revisa el mensaje</small></div></button>
+          <button class="step-tab" data-step="6"><span>6</span><div><strong>Rewrite</strong><small>Reformula el texto</small></div></button>
+          <button class="step-tab" data-step="7"><span>7</span><div><strong>My Reflection</strong><small>Reconoce tu proceso</small></div></button>
+        </aside>
+
+        <div class="step-content">
+          <article class="step-panel active" data-panel="1">
+            <span class="step-number">01</span>
+            <h3>My Idea · ¿Qué quieres comunicar?</h3>
+            <p>Escribe la idea central sin preocuparte todavía por producir una versión definitiva en inglés.</p>
+            <label for="ideaPurpose">Propósito del texto</label>
+            <input id="ideaPurpose" data-save="ideaPurpose" type="text" placeholder="Ejemplo: expresar mi opinión sobre el cuidado del río">
+            <label for="ideaAudience">¿A quién va dirigido?</label>
+            <input id="ideaAudience" data-save="ideaAudience" type="text" placeholder="Ejemplo: compañeros de clase">
+            <label for="ideaText">Idea inicial</label>
+            <textarea id="ideaText" data-save="ideaText" rows="8" placeholder="Puedes iniciar en español, inglés o combinando recursos para aclarar lo que deseas expresar."></textarea>
+          </article>
+
+          <article class="step-panel" data-panel="2">
+            <span class="step-number">02</span>
+            <h3>Meaning Bridge · Construye el puente de significado</h3>
+            <p>Recupera palabras, expresiones y relaciones que necesitas para llevar tu idea hacia el inglés.</p>
+            <div class="two-col">
+              <div>
+                <label for="knownWords">Words I know</label>
+                <textarea id="knownWords" data-save="knownWords" rows="7" placeholder="Palabras o expresiones en inglés que ya conoces"></textarea>
+              </div>
+              <div>
+                <label for="needWords">Words I need</label>
+                <textarea id="needWords" data-save="needWords" rows="7" placeholder="Significados que necesitas expresar y debes resolver"></textarea>
+              </div>
+            </div>
+            <label for="bridgeNotes">Comparaciones o notas</label>
+            <textarea id="bridgeNotes" data-save="bridgeNotes" rows="5" placeholder="¿Qué cambia entre español e inglés? ¿Qué expresión conserva mejor tu intención?"></textarea>
+          </article>
+
+          <article class="step-panel" data-panel="3">
+            <span class="step-number">03</span>
+            <h3>Plan My Text · Organiza antes de redactar</h3>
+            <p>Define una secuencia para que cada parte del texto contribuya al mensaje.</p>
+            <div class="planner-grid">
+              <div><label for="opening">Opening</label><textarea id="opening" data-save="opening" rows="5" placeholder="¿Cómo iniciarás?"></textarea></div>
+              <div><label for="development">Development</label><textarea id="development" data-save="development" rows="5" placeholder="¿Qué ideas desarrollarás?"></textarea></div>
+              <div><label for="closing">Closing</label><textarea id="closing" data-save="closing" rows="5" placeholder="¿Cómo cerrarás?"></textarea></div>
+            </div>
+          </article>
+
+          <article class="step-panel" data-panel="4">
+            <span class="step-number">04</span>
+            <h3>Write in English · First draft</h3>
+            <p>Transforma la planificación en un primer borrador en inglés y conserva el foco en el mensaje.</p>
+            <label for="firstDraft">First draft</label>
+            <textarea id="firstDraft" data-save="firstDraft" rows="15" lang="en" placeholder="Write your first English draft here..."></textarea>
+            <div class="word-count"><span id="draftWords">0</span> words</div>
+          </article>
+
+          <article class="step-panel" data-panel="5">
+            <span class="step-number">05</span>
+            <h3>Check the Meaning · Revisa antes de corregir</h3>
+            <p>Examina si el texto comunica lo previsto y después revisa las decisiones lingüísticas.</p>
+            <div class="checklist">
+              <label><input data-check="meaning" type="checkbox"> Mi texto conserva la idea central.</label>
+              <label><input data-check="sequence" type="checkbox"> Las ideas siguen una secuencia comprensible.</label>
+              <label><input data-check="vocabulary" type="checkbox"> El vocabulario expresa el significado que necesito.</label>
+              <label><input data-check="grammar" type="checkbox"> Revisé estructuras y formas gramaticales que afectan la claridad.</label>
+              <label><input data-check="audience" type="checkbox"> El texto responde al propósito y al destinatario.</label>
+            </div>
+            <label for="revisionNotes">What should I change?</label>
+            <textarea id="revisionNotes" data-save="revisionNotes" rows="7" placeholder="Escribe las decisiones de revisión que aplicarás."></textarea>
+          </article>
+
+          <article class="step-panel" data-panel="6">
+            <span class="step-number">06</span>
+            <h3>Rewrite · Final version</h3>
+            <p>Reformula el texto incorporando las decisiones construidas durante la revisión.</p>
+            <label for="finalText">Final English text</label>
+            <textarea id="finalText" data-save="finalText" rows="15" lang="en" placeholder="Write your revised English text here..."></textarea>
+            <div class="word-count"><span id="finalWords">0</span> words</div>
+          </article>
+
+          <article class="step-panel" data-panel="7">
+            <span class="step-number">07</span>
+            <h3>My Reflection · ¿Qué ocurrió durante tu escritura?</h3>
+            <p>Reconoce qué apoyos intervinieron y qué decisiones ayudaron a avanzar hacia la versión final.</p>
+            <label for="helpfulResources">¿Qué recursos lingüísticos fueron útiles?</label>
+            <textarea id="helpfulResources" data-save="helpfulResources" rows="5"></textarea>
+            <label for="mainChange">¿Cuál fue el cambio más importante entre el primer borrador y la versión final?</label>
+            <textarea id="mainChange" data-save="mainChange" rows="5"></textarea>
+            <label for="nextGoal">¿Qué quieres mejorar en tu próximo texto?</label>
+            <textarea id="nextGoal" data-save="nextGoal" rows="5"></textarea>
+          </article>
+
+          <div class="workspace-actions">
+            <button id="prevStep" class="button secondary" type="button">← Anterior</button>
+            <div class="save-state" id="saveState">Guardado local automático</div>
+            <button id="nextStep" class="button primary" type="button">Siguiente →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="utility-bar">
+        <button id="exportWork" class="text-button" type="button">Exportar mi trabajo (.txt)</button>
+        <button id="clearWork" class="text-button danger" type="button">Borrar datos locales</button>
+      </div>
+    </section>
+
+    <section id="fundamento" class="section theory-section" aria-labelledby="theoryTitle">
+      <div class="section-heading">
+        <div>
+          <span class="section-tag">Fundamento</span>
+          <h2 id="theoryTitle">Base conceptual de la propuesta</h2>
+        </div>
+      </div>
+      <div class="theory-grid">
+        <article>
+          <span class="theory-author">García · García & Wei</span>
+          <h3>Repertorio lingüístico</h3>
+          <p>El estudiante moviliza recursos lingüísticos disponibles para construir significado y reorganizarlo según la exigencia comunicativa.</p>
+        </article>
+        <article>
+          <span class="theory-author">Canagarajah</span>
+          <h3>Negociación durante la escritura</h3>
+          <p>El texto se construye mediante decisiones progresivas sobre claridad, propósito, interlocutor y pertinencia discursiva.</p>
+        </article>
+        <article>
+          <span class="theory-author">Vygotsky</span>
+          <h3>Mediación y acompañamiento</h3>
+          <p>La interacción, los apoyos semióticos y la guía pedagógica acompañan el avance hacia desempeños escritos con mayor autonomía.</p>
+        </article>
+        <article>
+          <span class="theory-author">Krashen · Ausubel</span>
+          <h3>Comprensión y saber previo</h3>
+          <p>La comprensión accesible y los conocimientos ya construidos sirven como punto de partida para elaborar nuevas formas de expresión.</p>
+        </article>
+        <article>
+          <span class="theory-author">Hymes · Canale & Swain</span>
+          <h3>Intención comunicativa</h3>
+          <p>La producción escrita se examina por la relación entre propósito, destinatario, claridad del mensaje y recursos lingüísticos seleccionados.</p>
+        </article>
+        <article>
+          <span class="theory-author">Busch · Blommaert & Backus</span>
+          <h3>Trayectoria del repertorio</h3>
+          <p>La escritura reúne recursos aprendidos en experiencias escolares, familiares y sociales que el estudiante reorganiza ante cada tarea.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="docente" class="section teacher-section" aria-labelledby="teacherTitle">
+      <div class="teacher-copy">
+        <span class="section-tag">Teacher Zone</span>
+        <h2 id="teacherTitle">Mediación docente dentro de la ruta</h2>
+        <p>
+          El docente acompaña la transición entre significado inicial y producción en inglés,
+          propone preguntas para precisar la intención, ayuda a contrastar elecciones léxicas,
+          revisa la relación entre estructura y mensaje, y usa los borradores como evidencia del proceso escritural.
+        </p>
+      </div>
+      <div class="teacher-tools">
+        <article><span>A</span><div><h3>Before writing</h3><p>Precisar propósito, audiencia, tema y repertorio disponible.</p></div></article>
+        <article><span>B</span><div><h3>During writing</h3><p>Preguntar por significado, ofrecer apoyos graduados y acompañar decisiones.</p></div></article>
+        <article><span>C</span><div><h3>After writing</h3><p>Comparar versiones, reconocer cambios y proyectar una nueva meta escritural.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section research-note">
+      <span class="section-tag">Vinculación investigativa</span>
+      <h2>Una propuesta abierta a los hallazgos</h2>
+      <p>
+        Esta primera versión traduce la pregunta, los objetivos y el soporte teórico del proyecto en una arquitectura pedagógica funcional.
+        Las fases, consignas, recursos y criterios definitivos se revisarán a partir de las experiencias de estudiantes y docentes,
+        las categorías emergentes y las relaciones interpretativas obtenidas durante el análisis cualitativo.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>TransWrite · El Dorado</strong>
+      <p>Propuesta pedagógica digital para producción textual en inglés mediante translenguaje.</p>
+    </div>
+    <p>Proyecto académico · Montería, Colombia · 2026</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
